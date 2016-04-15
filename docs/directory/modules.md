@@ -1,0 +1,170 @@
+# modules
+
+这个目录下的不同子目录中放置不同的模块，至少有一个命名为`core`的核心模块，内部结构如下：
+
+```
+* actions
+* components
+* configs
+* containers
+* libs
+* routes.jsx
+* index.js
+```
+
+## actions
+
+这个目录包含模块里所有的actions:
+
+```
+* posts.js
+* index.js
+* tests
+    - posts.js
+```
+
+`posts.js` 是一个ES2015模块，它可以导出一个具有action的js对象。
+
+下面是一个简单的action模块：
+
+```js
+export default {
+  create({Meteor, LocalState, FlowRouter}, title, content) {
+    //...
+  },
+
+  clearErrors({LocalState}) {
+    //...
+  }
+};
+```
+
+在`index.js`里导入所有的action模块并聚合所有action，并给每个模块一个命名空间。
+
+```js
+import posts from './posts';
+
+export default {
+  posts
+};
+```
+
+在上面例子中，我们给`posts.js`action模块一个`posts`的命名空间。
+
+*在应用程序中命名空间需要唯一性，这是我们在编写模块时需要注意的。*
+
+在tests目录下，我们针对每个action模块编写它们的测试，可以参考附录D以获取更多的关于测试文件命名规则的问题。
+
+[点击这里查看action的目录结构](https://github.com/mantrajs/mantra-sample-blog-app/tree/master/client/modules/core/actions)
+
+## components
+
+components目录包含模块的UI组件：
+
+```
+* main_layout.jsx
+* post.jsx
+* style.css
+* tests
+  - main_layout.js
+  - post.js
+```
+
+* 这个目录下所有的`.jsx`文件都需要有一个默认的export。它应该是一个React类。
+* 您可以针对这些React组件编写CSS文件，Meteor会帮您打包。
+
+这里也有一个tests目录，具体命名习惯可以参考附录D。
+
+[点击这里查看components的目录结构](https://github.com/mantrajs/mantra-sample-blog-app/tree/master/client/modules/core/components)
+
+## containers
+
+这个目录包含一些 `.js` 文件, 每个文件代表一个容器，并具有一个默认导出的React容器类：
+
+```
+* post.js
+* postlist.js
+* tests
+    - post.js
+    - postlist.js
+```
+
+这里也有一个测试目录`tests`，具体命名习惯可以参考附录D。
+
+[点击这里查看容器的目录结构](https://github.com/mantrajs/mantra-sample-blog-app/tree/master/client/modules/core/containers)
+
+## configs
+
+这个目录包含模块的配置信息。
+
+这个目录下所有的js文件都需要导出一个默认函数，完成初始化并返回一些内容，这些函数都采用应用程序上下文作为第一个参数。
+
+下面是一个示例的配置文件：
+
+```js
+export default function (context) {
+  // do something
+}
+```
+
+在加载模块时，这些配置信息会被导入和调用。
+
+[点击这里查看configs的目录结构](https://github.com/mantrajs/mantra-sample-blog-app/tree/master/client/modules/core/configs)
+
+## libs
+
+这个目录包含一系列能够导出工具函数的js文件，这也被称作为库，您可以在tests目录下为这些库编写测试函数。
+
+## routes.jsx
+
+这个文件包含模块的路由定义，它有一个默认导出函数:
+
+```js
+import React from 'react';
+import {FlowRouter} from 'meteor/kadira:flow-router';
+import {mount} from 'react-mounter';
+
+import MainLayout from '/client/modules/core/components/main_layout.jsx';
+import PostList from '/client/modules/core/containers/postlist';
+
+export default function (injectDeps) {
+  const MainLayoutCtx = injectDeps(MainLayout);
+
+  FlowRouter.route('/', {
+    name: 'posts.list',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<PostList />)
+      });
+    }
+  });
+}
+```
+
+这里默认导出一个函数，函数里在加载模块时使用`injectDeps`向React组件里面注入依赖。
+
+## index.js
+
+这是模块定义文件，如果不考虑下面这些工作就不需要这个定义文件了:
+
+* 加载路由
+* 定义action
+* 加载模块时运行配置信息
+
+下面是一个标准的模块定义：
+
+```js
+import methodStubs from './configs/method_stubs';
+import actions from './actions';
+import routes from './routes.jsx';
+
+export default {
+  routes,
+  actions,
+  load(context) {
+    methodStubs(context);
+  }
+};
+```
+
+在这个模块定义里`.load()` 方法在模块加载时被调用。所以，这是调用配置的地方。
