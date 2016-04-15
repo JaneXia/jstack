@@ -6,7 +6,7 @@
 * 将action传递到UI组件里
 * 将应用程序上下文内容传递到UI组件里
 
-容器也是一个React组件，它通过[react-komposer](https://github.com/kadirahq/react-komposer)进行集成，支持不同的数据源，包括Meteor/Tracker, Promises, Rx.js Observable等。
+容器也是一个React组件，它通过[react-komposer](https://github.com/kadirahq/react-komposer)进行集成，支持不同的数据源，包括Meteor/Tracker, Promises, Rx.js Observable等。它使得React容器从不同的数据源获取数据并加载到UI组件更加容易，具体内容可以参考[Let’s Compose Some React Containers](https://voice.kadira.io/let-s-compose-some-react-containers-3b91b6d9b7c8#.my9ynz9e2)。
 
 容器内需要写如下这些函数：
 
@@ -41,3 +41,11 @@ export default composeAll(
   useDeps()
 )(PostList);
 ```
+
+
+
+
+
+我们使用React容器从不同的数据源获取数据并加载到UI组件时，[react-komposer](https://github.com/kadirahq/react-komposer)使这项工作更加容易，下面这篇文章可以让您获取更多知识。
+
+* [Let’s Compose Some React Containers](https://voice.kadira.io/let-s-compose-some-react-containers-3b91b6d9b7c8#.my9ynz9e2)

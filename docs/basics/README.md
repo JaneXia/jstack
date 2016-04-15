@@ -3,7 +3,7 @@
 这里介绍Mantra的基础内容，以及它们的组织方式。
 
 * [侧重客户端](client.md)
-* [ES6语法和模块](es6.md)
+* [ES6](es6.md)
 * [UI使用React](ui.md)
 * [Action](action.md)
 * [状态管理](state.md)

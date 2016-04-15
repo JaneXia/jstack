@@ -1,6 +1,8 @@
 # UI使用React
 
-Mantra使用React实现UI表现层。
+React是一个基于JavaScript的UI框架，Mantra使用React实现UI表现层。
+
+我们目前很少使用React组件的状态，而是通过props获取数据，React的[无状态组件](https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d)使这项工作非常容易。
 
 UI组件不依赖程序，也不能读取程序状态，用来渲染UI组件的数据和事件处理函数是通过props传入的。有时在UI组件里会使用临时本地状态，但是这样的状态永远不会被外部的内容引用。
 
@@ -31,3 +33,9 @@ const PostList = ({posts}) => (
 
 export default PostList;
 ```
+
+下面是一些React学习资源：
+
+* [官方教程](https://facebook.github.io/react/docs/tutorial.html)
+* [Scotch.io的入门教程](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)
+* [React Components, Elements, and Instances](https://medium.com/@dan_abramov/react-components-elements-and-instances-90800811f8ca)
