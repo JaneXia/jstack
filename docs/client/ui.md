@@ -1,4 +1,4 @@
-# UI使用React
+# UI组件
 
 React是一个基于JavaScript的UI框架，Mantra使用React实现UI表现层。
 
@@ -33,9 +33,3 @@ const PostList = ({posts}) => (
 
 export default PostList;
 ```
-
-下面是一些React学习资源：
-
-* [官方教程](https://facebook.github.io/react/docs/tutorial.html)
-* [Scotch.io的入门教程](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)
-* [React Components, Elements, and Instances](https://medium.com/@dan_abramov/react-components-elements-and-instances-90800811f8ca)

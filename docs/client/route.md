@@ -1,4 +1,4 @@
-# 路由和组件挂载
+# 路由
 
 在Mantra里，路由唯一的功能就是将组件挂载(mount)到UI上。可以有多种选择，比如[Flow Router](https://github.com/kadirahq/flow-router/)和[React Router](https://github.com/rackt/react-router)。
 
