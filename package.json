@@ -5,7 +5,7 @@
     "clean": "rimraf _book",
     "build": "gitbook build -g laniakea-stack/mplus",
     "watch": "gitbook serve",
-    "publish": "npm run clean && npm run build && cp CNAME _book && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:laniakea-stack/mplus gh-pages --force"
+    "deploy": "npm run clean && npm run build && cp CNAME _book && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:laniakea-stack/mplus gh-pages --force"
   },
   "repository": {
     "type": "git",
