@@ -1,9 +1,10 @@
-# Mantra包含什么?
+# 本文包含内容
 
-* 它有一个时髦的基于React的 **UI组件** 界面层
-* 它有一个定义业务逻辑的地方，我们称之为 **action**
-* 状态管理(Stage Management)并非由Mantra自身提供，您可以使用多种状态管理机制，包括Meteor/Tracker，Redux，Rx.js和Promises等
-* 它提供了一种通过组合容器(composing containers)将状态和action集成到界面组件里的方法
-* 它允许您注入依赖
-* 它帮助您单元测试界面，action和容器
-* 它有一个针对目录结构，文件命名和其它相关内容的标准
+* 界面组件：基于React Stateless Components的强调复用性的组件构建方法
+* 业务逻辑：通过 **Action** 来定义业务逻辑，并充分考虑程序解耦问题
+* 状态管理：可以使用多种状态管理机制管理本地状态和远端状态
+* 组合容器：通过容器将状态和action集成到界面组件中的方法
+* 单元测试：尽量做到代码每一部分代码都是可测试的
+* 文件目录：类似rails一样，为所有项目建立完全一致的目录结构及文件命名标准
+* 第三方库：在[Kadira](https://github.com/kadirahq)和[MantraJS](https://github.com/mantrajs)里面引入的众多辅助库
+* 规范准则：应用程序架构应用程序开发者，工具链开发者，教程作者和项目经理都息息相关，需要制定一个公共遵循的共同标准。

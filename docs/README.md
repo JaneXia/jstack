@@ -1,11 +1,8 @@
 ## 目录
 
 * [自述](README.md)
-* [介绍](/docs/introduction/README.md)
-  * [Mantra包含什么](/docs/introduction/inc.md)
-  * [Mantra不是什么](/docs/introduction/not.md)
-  * [Mantra是什么](/docs/introduction/what.md)
-  * [为什么需要规范](/docs/introduction/why.md)
+* [简介](/docs/introduction/README.md)
+  * [内容梗概](/docs/introduction/inc.md)
   * [预备知识](/docs/introduction/pre.md)
 * [客户端](/docs/client/README.md)
   * [目录结构](/docs/client/directory.md)
