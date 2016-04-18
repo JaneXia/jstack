@@ -1,8 +1,8 @@
 # 路由
 
-在Mantra里，路由唯一的功能就是将组件挂载(mount)到UI上。可以有多种选择，比如[Flow Router](https://github.com/kadirahq/flow-router/)和[React Router](https://github.com/rackt/react-router)。
+路由的主要功能是将组件挂载到界面上，我们使用[Flow Router](https://github.com/kadirahq/flow-router/).
 
-下面例子使用FlowRouter作为路由:
+示例如下:
 
 ```js
 import React from 'react';

@@ -9,5 +9,4 @@
 * [上下文](context.md)
 * [依赖注入](di.md)
 * [路由](route.md)
-* [库](lib.md)
-* [单入口点](entry.md)
+* [程序入口](entry.md)

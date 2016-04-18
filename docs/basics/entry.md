@@ -1,19 +1,21 @@
-# 单入口点
+# 程序入口
 
-我们希望Mantra程序的运行是可预期的，这样我们会在程序里放置唯一的入口点`client/main.js`。它会初始化程序上下文并加载程序中所有的模块，下面是一个示例：
+程序里唯一的程序入口`client/main.js`可以让程序行为可预期，通常在这里初始化程序上下文并加载程序中所有的模块。
+
+下面是客户端程序入口的示例：
 
 ```js
 import {createApp} from 'mantra-core';
 import {initContext} from './configs/context';
 
-// modules
+// 导入模块
 import coreModule from './modules/core';
 import commentsModule from './modules/comments';
 
-// init context
+// 初始化上下文
 const context = initContext();
 
-// create app
+// 创建应用并加载模块
 const app = createApp(context);
 app.loadModule(coreModule);
 app.loadModule(commentsModule);
