@@ -1,28 +1,29 @@
 # 容器
 
-容器是Mantra里的集成层，它主要执行如下操作:
+容器(Container)又被称作React Smart Component，它也是一个React组件，通过[react-komposer](https://github.com/kadirahq/react-komposer)集成不同的数据源，而
+`react-komposer`相关内容可以参考[Let’s Compose Some React Containers](https://voice.kadira.io/let-s-compose-some-react-containers-3b91b6d9b7c8#.my9ynz9e2)
 
-* 使用状态修改变量并将它们通过props传递到UI组件里
-* 将action传递到UI组件里
-* 将应用程序上下文内容传递到UI组件里
+容器主要执行如下操作:
 
-容器也是一个React组件，它通过[react-komposer](https://github.com/kadirahq/react-komposer)进行集成，支持不同的数据源，包括Meteor/Tracker, Promises, Rx.js Observable等。
+* 通过props给界面组件传递变量
+* 通过props给界面组件传递action
+* 通过props给界面组件传递上下文context
 
-容器内需要写如下这些函数：
+需要为容器提高如下函数：
 
 * 从状态管理模块获取数据的composer函数
 * 从依赖注入层获取数据的mapper函数
 
-创建一个容器时需要遵循如下规则：
+创建容器需遵循如下规则：
 
-* 每个文件仅能有一个容器，而且需要被默认导出(default export)
-* composer函数和mapper函数需要从容器模块里面导出
+* 每个文件仅有一个容器，并被默认导出
+* composer函数和mapper函数需从容器模块导出
 * composer函数只能使用从props获得的变量
 * mapper函数应该是[纯函数](https://en.wikipedia.org/wiki/Pure_function).
 
-注意：如果您需要将应用程序上下文传递给一个组件，要使用mapper通过props传递。
+注意：如果需要将上下文传递给组件，要使用mapper通过props传递。
 
-下面是一个容器的例子:
+示例：
 
 ```js
 import PostList from '../components/postlist.jsx';
@@ -41,11 +42,3 @@ export default composeAll(
   useDeps()
 )(PostList);
 ```
-
-
-
-
-
-我们使用React容器从不同的数据源获取数据并加载到UI组件时，[react-komposer](https://github.com/kadirahq/react-komposer)使这项工作更加容易，下面这篇文章可以让您获取更多知识。
-
-* [Let’s Compose Some React Containers](https://voice.kadira.io/let-s-compose-some-react-containers-3b91b6d9b7c8#.my9ynz9e2)
