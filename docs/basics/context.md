@@ -1,17 +1,17 @@
 # 上下文
 
-应用程序上下文对所有action和容器都是可见的，所以可以将应用程序共享变量放在这个地方，包括
+上下文是保存应用程序共享变量的地方，action和容器都可以通过上下文放在这些变量，它们包括：
 
-* Meteor命名空间
-* Meteor数据集
+* Meteor 命名空间
+* Meteor Collection
 * LocalState
 * FlowRouter
-* 其它Meteor包
+* Meteor Package
 * Redux存储
 * Rest客户端
 * DDP客户端
 
-下面是一个简单的例子：
+下面例子创建并导出了整个应用程序客户端的上下文：
 
 ```js
 import * as Collections from '/lib/collections';
