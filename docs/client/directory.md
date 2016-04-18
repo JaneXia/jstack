@@ -1,4 +1,48 @@
-# modules
+# 目录结构
+
+在Mantra里强制目录结构规则，这是可维护性的关键。
+
+所有Mantra相关代码都在应用程序的 `client` 目录下，这个目录有2个子目录和1个js文件，它们是：
+
+```
+* configs
+* modules
+* main.js
+```
+
+## main.js
+
+这里是Mantra应用程序的入口，初始化程序上下文并加载模块，这些工作是由一个被称作`mantra-core`的库完成的。
+
+下面是一个例子：
+
+```js
+import {createApp} from 'mantra-core';
+import initContext from './configs/context';
+
+// modules
+import coreModule from './modules/core';
+import commentsModule from './modules/comments';
+
+// init context
+const context = initContext();
+
+// create app
+const app = createApp(context);
+app.loadModule(coreModule);
+app.loadModule(commentsModule);
+app.init();
+```
+
+## configs
+
+这个目录包含应用程序的顶层配置信息，针对所有模块通用的配置信息放在这里。
+
+这个目录下所有的js文件应该都具备一个默认导出函数，它完成初始化工作并返回一些必要的内容。
+
+*我们一般用这里的`context.js`文件放置应用程序上下文。*
+
+## modules
 
 这个目录下的不同子目录中放置不同的模块，至少有一个命名为`core`的核心模块，内部结构如下：
 
@@ -12,7 +56,7 @@
 * index.js
 ```
 
-## actions
+### actions
 
 这个目录包含模块里所有的actions:
 
@@ -57,7 +101,7 @@ export default {
 
 [点击这里查看action的目录结构](https://github.com/mantrajs/mantra-sample-blog-app/tree/master/client/modules/core/actions)
 
-## components
+### components
 
 components目录包含模块的UI组件：
 
@@ -93,7 +137,7 @@ components目录包含模块的UI组件：
 
 [点击这里查看容器的目录结构](https://github.com/mantrajs/mantra-sample-blog-app/tree/master/client/modules/core/containers)
 
-## configs
+### configs
 
 这个目录包含模块的配置信息。
 
@@ -111,11 +155,11 @@ export default function (context) {
 
 [点击这里查看configs的目录结构](https://github.com/mantrajs/mantra-sample-blog-app/tree/master/client/modules/core/configs)
 
-## libs
+### libs
 
 这个目录包含一系列能够导出工具函数的js文件，这也被称作为库，您可以在tests目录下为这些库编写测试函数。
 
-## routes.jsx
+### routes.jsx
 
 这个文件包含模块的路由定义，它有一个默认导出函数:
 
@@ -143,7 +187,7 @@ export default function (injectDeps) {
 
 这里默认导出一个函数，函数里在加载模块时使用`injectDeps`向React组件里面注入依赖。
 
-## index.js
+### index.js
 
 这是模块定义文件，如果不考虑下面这些工作就不需要这个定义文件了:
 

@@ -7,6 +7,7 @@
 * 我们鼓励单个服务器和多个客户端应用程序交互，而不是[万能应用](https://voice.kadira.io/say-no-to-isomorphic-apps-b7b7c419c634#.hogcs5r24)。
 
 
+* [目录结构](directory.md)
 * [UI组件](ui.md)
 * [Action](action.md)
 * [状态管理](state.md)
@@ -15,6 +16,4 @@
 * [依赖注入](di.md)
 * [路由](route.md)
 * [库](lib.md)
-* [测试](test.md)
-* [模块](module.md)
 * [单入口点](entry.md)
