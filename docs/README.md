@@ -17,6 +17,7 @@
   * [基本约定](/docs/directory/basic.md)
   * [client](/docs/directory/client.md)
   * [server](/docs/directory/server.md)
+  * [lib](/docs/directory/lib.md)
 * [模块化架构](/docs/module/README.md)
 * [代码规范](/docs/codestyle/README.md)
 * [命名约定](/docs/naming/README.md)
