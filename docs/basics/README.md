@@ -1,4 +1,4 @@
-# 客户端
+# 基本概念
 
 基于如下几点考虑，客户端是应用程序的重点：
 
@@ -6,8 +6,6 @@
 * 未来客户端程序可通过schema与服务端交互，而不依赖于服务端的实现机制。
 * 我们鼓励单个服务器和多个客户端应用程序交互，而不是[万能应用](https://voice.kadira.io/say-no-to-isomorphic-apps-b7b7c419c634#.hogcs5r24)。
 
-
-* [目录结构](directory.md)
 * [UI组件](ui.md)
 * [Action](action.md)
 * [状态管理](state.md)
