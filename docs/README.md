@@ -5,7 +5,7 @@
   * [内容梗概](/docs/introduction/inc.md)
   * [预备知识](/docs/introduction/pre.md)
 * [基本概念](/docs/basics/README.md)
-  * [UI组件](/docs/basics/ui.md)
+  * [界面组件](/docs/basics/component.md)
   * [Action](/docs/basics/action.md)
   * [状态管理](/docs/basics/state.md)
   * [容器](/docs/basics/container.md)

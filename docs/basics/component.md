@@ -1,4 +1,4 @@
-# UI组件
+# 界面组件
 
 React是一个基于JavaScript的UI框架，Mantra使用React实现UI表现层。
 

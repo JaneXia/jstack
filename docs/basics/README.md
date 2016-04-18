@@ -1,12 +1,8 @@
 # 基本概念
 
-基于如下几点考虑，客户端是应用程序的重点：
+这里初步介绍几个相关概念
 
-* 客户端比服务端是代码更多，工作量也更大。
-* 未来客户端程序可通过schema与服务端交互，而不依赖于服务端的实现机制。
-* 我们鼓励单个服务器和多个客户端应用程序交互，而不是[万能应用](https://voice.kadira.io/say-no-to-isomorphic-apps-b7b7c419c634#.hogcs5r24)。
-
-* [UI组件](ui.md)
+* [界面组件](component.md)
 * [Action](action.md)
 * [状态管理](state.md)
 * [容器](container.md)
