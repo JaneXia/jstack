@@ -20,6 +20,7 @@
   * [server](/docs/directory/server.md)
   * [lib](/docs/directory/lib.md)
 * [界面组件](/docs/component/README.md)  
+* [状态管理](/docs/state/README.md)  
 * [代码规范](/docs/codestyle/README.md)
 * [命名约定](/docs/naming/README.md)
 * [测试](/docs/testing/README.md)
