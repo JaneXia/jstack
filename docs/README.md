@@ -23,5 +23,6 @@
 * [状态管理](/docs/state/README.md)  
 * [代码规范](/docs/codestyle/README.md)
 * [命名约定](/docs/naming/README.md)
-* [测试](/docs/testing/README.md)
+* [自动测试](/docs/testing/README.md)
+* [持续集成](/docs/ci/README.md)
 * [词汇表](/docs/Glossary.md)

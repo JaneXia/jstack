@@ -1,4 +1,4 @@
-# 测试
+# 自动测试
 
 测试是Mantra和核心内容，可以对程序的每部分进行测试。具体实现时可以使用诸如[Mocha](https://mochajs.org/), [Chai](http://chaijs.com/), 和 [Sinon](http://sinonjs.org/)这样的常见工具。
 
