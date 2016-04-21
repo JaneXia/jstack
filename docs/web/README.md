@@ -1,7 +1,6 @@
-# 基本概念
+# Web前端
 
-这里初步介绍几个相关概念
-
+* [目录结构](directory.md)
 * [界面组件](component.md)
 * [Action](action.md)
 * [状态管理](state.md)

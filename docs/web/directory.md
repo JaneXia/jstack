@@ -9,7 +9,6 @@
 * modules
 * main.js
 ```
-
 ## main.js
 
 这里是Mantra应用程序的入口，初始化程序上下文并加载模块，这些工作是由一个被称作`mantra-core`的库完成的。
