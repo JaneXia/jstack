@@ -1,3 +1,9 @@
 # 技术规则
 
-基于NodeJS生态系统的应用程序开发技术栈规范及最佳实践集合，在架构上目前主要源于[Mantra](https://kadirahq.github.io/mantra/)，而开发平台方面主要是基于[Meteor](https://www.meteor.com/)。
+基于JavaScript生态系统的应用程序开发技术栈规范及最佳实践集合。
+
+* Web前端参考[Mantra](https://kadirahq.github.io/mantra/)
+* App前端参考[ReactNative](http://facebook.github.io/react-native/)
+* Desk前端参考[Electron](http://electron.atom.io/)
+* ApiServer参考[KOA](http://koajs.com/)和[Loopback](http://loopback.io/)
+* 开发平台参考[Meteor](https://www.meteor.com/)
