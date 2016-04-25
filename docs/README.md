@@ -1,9 +1,9 @@
 ## 目录
 
 * [自述](README.md)
-* [简介](/docs/introduction/README.md)
-  * [内容梗概](/docs/introduction/contents.md)
-  * [预备知识](/docs/introduction/pre.md)
+* [简介](/docs/intro/README.md)
+  * [内容梗概](/docs/intro/contents.md)
+  * [预备知识](/docs/intro/pre.md)
 * [数据建模](/docs/datamodel/README.md)
 * [接口服务器](/docs/apiserver/README.md)  
 * [Web前端](/docs/web/README.md)  
