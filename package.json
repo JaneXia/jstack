@@ -1,15 +1,15 @@
 {
-  "name": "teck-stack",
-  "description": "Tecnical Stack",
+  "name": "jstack",
+  "description": "JavaScript Stack Best Practice",
   "scripts": {
     "clean": "rimraf _book",
-    "build": "gitbook build -g laniakea-stack/tech-stack",
+    "build": "gitbook build -g laniakea-stack/jstack",
     "watch": "gitbook serve",
-    "deploy": "npm run clean && npm run build && cp CNAME _book && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:laniakea-stack/tech-stack gh-pages --force"
+    "deploy": "npm run clean && npm run build && cp CNAME _book && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:laniakea-stack/jstack gh-pages --force"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/laniakea-stack/tech-stack.git"
+    "url": "https://github.com/laniakea-stack/jstack.git"
   },
   "keywords": [
     "flux",
