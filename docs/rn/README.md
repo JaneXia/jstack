@@ -1,3 +1,3 @@
-# ReactNative
+# App前端
 
-采用RN构建iOS和安卓程序。
+采用ReactNative构建iOS和安卓程序。
