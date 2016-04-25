@@ -6,7 +6,7 @@
   "plugins": ["edit-link", "prism", "ga"],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/laniakea-stack/mplus/tree/master",
+      "base": "https://github.com/laniakea-stack/jstack/tree/master",
       "label": "开始纠错"
     },
     "ga": {
