@@ -21,5 +21,6 @@
 * **桌面前端** 通过[Electron](http://electron.atom.io/)构建桌面应用的方式
 * **ApiServer**：通过参考[KOA](http://koajs.com/)和[Loopback](http://loopback.io/)等框架构建ApiServer的方式
 
-
 **PART III: 结合部署实践，讨论高可用大并发互联网平台的构建方式**
+
+* **微服务架构**
