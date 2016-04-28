@@ -87,6 +87,12 @@
 * 
       样例： "callback-return": 2
       默认值：["callback", "cb", "next"]
+      function doSomething(err, callback) { // √
+        if (err) {
+            return callback(err);
+        }
+        callback();
+      }
       
 * camelcase
 * comma-dangle
