@@ -36,16 +36,19 @@
 
 ** 具体规则**
 * **array-bracket-spacing **定义数组格式间距
+
     * `"never"` 默认值
     * `"always"` 使用间隔    
           样例："array-bracket-spacing": [2, "always"]
           var arr = [ 'foo', 'bar' ];  // √ 
           var arr = ['foo', 'bar'];  // x          
 * **arrow-spacing** 箭头间距,箭头函数前后是否有间距
+
       样例："arrow-spacing": 2
       (a) => {} // √
       (a)=>{} // x      
 * **block-scoped-var** 
+
       样例："block-scoped-var": 0  // 不校验此规则
       function doIf() { // √
         var build;
@@ -98,6 +101,7 @@
 
       样例："camelcase": [2, {"properties": "always"}],
 
+      ---- 通过 ----
       var myFavoriteColor   = "#112C85"; // √      
       var _myFavoriteColor  = "#112C85"; // √
       var myFavoriteColor_  = "#112C85"; // √
@@ -107,6 +111,7 @@
       var { category_id: category } = query;  // √
       obj.do_something();  // √
       
+      ---- 不通过 ----
       var my_favorite_color = "#112C85"; // x
       obj.do_something = function() { // x
         // ...
@@ -116,11 +121,180 @@
       };
       
       
-* comma-dangle
-* comma-spacing
-* comma-style
-* complexity
+* **comma-dangle**  使用变量后是否加 `,`
+
+      样例："comma-dangle": [2,"always"]
       
-   
+      ---- 通过 ----
+      var foo = { 
+          bar: "baz",
+          qux: "quux",
+      };
+      var arr = [1,2,]; 
+      foo({  
+        bar: "baz",
+        qux: "quux",
+      });
+      
+      ---- 不通过 ----
+      var foo = { 
+          bar: "baz",
+          qux: "quux"
+      };
+      var arr = [1,2];  
+      foo({  
+        bar: "baz",
+        qux: "quux"
+      });
+      
+  
+
+* **comma-spacing** 使用变量是否加空格 
+
+      样例：comma-spacing: ["error", { "before": false, "after": true }]
+      ---- 不通过 ----
+      var foo = 1 ,bar = 2;
+      var arr = [1 , 2];
+      var obj = {"foo": "bar" ,"baz": "qur"};
+      foo(a ,b);
+      new Foo(a ,b);
+      function foo(a ,b){}
+      a ,b
+      
+      ---- 通过 ----
+        var foo = 1, bar = 2
+          , baz = 3;
+      var arr = [1, 2];
+      var arr = [1,, 3]
+      var obj = {"foo": "bar", "baz": "qur"};
+      foo(a, b);
+      new Foo(a, b);
+      function foo(a, b){}
+      a, b
+      
+* **comma-style**
+        
+        样例：eslint comma-style: ["error", "last"]
+        ---- 通过 ----
+        var foo = 1, bar = 2;
+        var foo = 1,
+            bar = 2;
+        var foo = ["apples",
+                   "oranges"];
+        function bar() {
+            return {
+                "a": 1,
+                "b:": 2
+            };
+        }
+        
+        ---- 不通过 ----
+        var foo = 1
+        ,
+        bar = 2;
+        var foo = 1
+          , bar = 2;
+        var foo = ["apples"
+                   , "oranges"];
+        function bar() {
+            return {
+                "a": 1
+                ,"b:": 2
+            };
+        }
+* **complexity**
+
+      样例：eslint complexity: ["error", 2]
+         
+        ---- 通过 ----
+        function a(x) {
+            if (true) {
+                return x;
+            } else {
+                return 4;
+            }
+        }
+        
+        ---- 不通过 ---- 
+        function a(x) {
+            if (true) {
+                return x;
+            } else if (false) {
+                return x+1;
+            } else {
+                return 4; // 3rd path
+            }
+        }
+* **computed-property-spacing **   
+      样例：computed-property-spacing: ["error", "never"]
+      ---- 通过 ----
+      obj[foo]
+      obj['foo']
+      var x = {[b]: a}
+      obj[foo[bar]]
+      
+      ---- 不通过 ----
+      obj[foo ]
+      obj[ 'foo']
+      var x = {[ b ]: a}
+      obj[foo[ bar ]]
+        
+* **consistent-return **
+      样例：eslint consistent-return: 2
+      ---- 通过 ----
+      function doSomething(condition) {
+
+          if (condition) {
+              return true;
+          } else {
+              return false;
+          }
+      }
+
+      function Foo() {
+          if (!(this instanceof Foo)) {
+              return new Foo();
+          }
+
+          this.a = 0;
+      }
+      ---- 不通过 ----
+      function doSomething(condition) {
+
+          if (condition) {
+              return true;
+          } else {
+              return;
+          }
+      }
+
+      function doSomething(condition) {
+
+          if (condition) {
+              return;
+          } else {
+              return true;
+          }
+      }
+
+      function doSomething(condition) {
+
+          if (condition) {
+              return true;
+          }
+      }
+        
+* consistent-this
+* curly
+* default-case
+* dot-location
+* dot-notation
+* eol-last
+* eqeqeq
+* func-names
+* func-style
+* 
+  
+  
         
     
