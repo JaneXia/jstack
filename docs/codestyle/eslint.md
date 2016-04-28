@@ -13,7 +13,7 @@
      */
     "sourceType": "module",
     "ecmaFeatures":{
-        "experimentalObjectRestSpread": true, // 允许使用rest参数,扩展运算符
+        "experimentalObjectRestSpread": true, // 使用rest参数,扩展运算符
         "globalReturn": true, // 全局return
         "jsx": true // 支持jsx
     }
