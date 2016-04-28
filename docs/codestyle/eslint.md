@@ -108,6 +108,9 @@
       obj.do_something();  // √
       
       var my_favorite_color = "#112C85"; // x
+      obj.do_something = function() { // x
+        // ...
+      };
       var obj = { // x
         my_pref: 1
       };
