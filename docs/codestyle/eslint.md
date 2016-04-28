@@ -82,10 +82,12 @@
         // when there are no braces, there are no problems
         if (foo) bar();
         else if (baz) boom();
-      
+            
 * **callback-return**
+* 
       样例： "callback-return": 2
       默认值：["callback", "cb", "next"]
+      
 * camelcase
 * comma-dangle
 * comma-spacing
