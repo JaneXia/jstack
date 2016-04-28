@@ -84,7 +84,7 @@
         else if (baz) boom();
             
 * **callback-return**
-* 
+
       样例： "callback-return": 2
       默认值：["callback", "cb", "next"]
       function doSomething(err, callback) { // √
@@ -94,7 +94,25 @@
         callback();
       }
       
-* camelcase
+* **camelcase**  驼峰命名
+
+      样例："camelcase": [2, {"properties": "always"}],
+
+      var myFavoriteColor   = "#112C85"; // √      
+      var _myFavoriteColor  = "#112C85"; // √
+      var myFavoriteColor_  = "#112C85"; // √
+      var MY_FAVORITE_COLOR = "#112C85"; // √
+      var foo = bar.baz_boom;  // √
+      var foo = { qux: bar.baz_boom };  // √
+      var { category_id: category } = query;  // √
+      obj.do_something();  // √
+      
+      var my_favorite_color = "#112C85"; // x
+      var obj = { // x
+        my_pref: 1
+      };
+      
+      
 * comma-dangle
 * comma-spacing
 * comma-style
