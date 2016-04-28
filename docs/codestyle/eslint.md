@@ -62,7 +62,25 @@
         console.log(build);
       }
      
-* **brace-style**
+* **brace-style**brace风格
+
+      样例："brace-style": [2, "1tbs", {"allowSingleLine": true}]
+      正确
+        if (foo) {
+          bar();
+        }
+
+        if (foo) {
+          bar();
+        } else {
+          baz();
+        }
+
+        if (foo) { bar(); }       // 单行
+        // when there are no braces, there are no problems
+        if (foo) bar();
+        else if (baz) boom();
+      
 * callback-return
 * camelcase
 * comma-dangle
