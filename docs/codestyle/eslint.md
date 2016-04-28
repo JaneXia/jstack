@@ -35,7 +35,7 @@
 | "error" or 2 | 如不符合规则，显示错误|
 
 ** 具体规则**
-* **array-bracket-spacing **定义数组格式间距 [详细介绍](http://eslint.org/docs/rules/array-bracket-spacing#options)    
+* **array-bracket-spacing **定义数组格式间距
     * `"never"` 默认值
     * `"always"` 使用间隔    
           样例："array-bracket-spacing": [2, "always"]
@@ -62,14 +62,16 @@
         console.log(build);
       }
      
-* **brace-style**brace风格
+* **brace-style** 
 
       样例："brace-style": [2, "1tbs", {"allowSingleLine": true}]
-      正确
-        if (foo) {
+        if (foo) { // √
           bar();
         }
-
+        if （foo） // x
+        {
+          bar();
+        }
         if (foo) {
           bar();
         } else {
@@ -81,7 +83,9 @@
         if (foo) bar();
         else if (baz) boom();
       
-* callback-return
+* **callback-return**
+      样例： "callback-return": 2
+      默认值：["callback", "cb", "next"]
 * camelcase
 * comma-dangle
 * comma-spacing
