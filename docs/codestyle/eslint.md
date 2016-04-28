@@ -23,12 +23,53 @@
  }
 }
 ```
-### rules
-* 数组间隔,默认值为default,即数组前后没有间隔
-    
-    `"array-bracket-spacing": [2, "always"]` 
+## rules
 
-    `var arr = [ 'foo', 'bar' ];  // always`
 
-    `var [ x, y ] = z;  // never `
+**表示含义**
+
+| 值 | 含义 |
+| -- | -- |
+| "off" or 0 | 不校验此规则 |
+| "warn" or 1 | 如不符合规则，显示警告 |
+| "error" or 2 | 如不符合规则，显示错误|
+
+** 具体规则**
+* **array-bracket-spacing **定义数组格式间距 [详细介绍](http://eslint.org/docs/rules/array-bracket-spacing#options)    
+    * `"never"` 默认值
+    * `"always"` 使用间隔    
+          样例："array-bracket-spacing": [2, "always"]
+          var arr = [ 'foo', 'bar' ];  // √ 
+          var arr = ['foo', 'bar'];  // x          
+* **arrow-spacing** 箭头间距,箭头函数前后是否有间距
+      样例："arrow-spacing": 2
+      (a) => {} // √
+      (a)=>{} // x      
+* **block-scoped-var** 
+      样例："block-scoped-var": 0  // 不校验此规则
+      function doIf() { // √
+        var build;
+        if (true) {
+          build = true;
+        }
+        console.log(build);
+      }
+      
+      function doIf() { // x
+        if (true) {
+          var build = true;
+        }
+        console.log(build);
+      }
+     
+* **brace-style**
+* callback-return
+* camelcase
+* comma-dangle
+* comma-spacing
+* comma-style
+* complexity
+      
+   
+        
     
