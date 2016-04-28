@@ -1,7 +1,17 @@
 # ESLint
 
+ 使用ESLint约束代码规范性，使各个协作人员写出来的代码风格保持一致，eslint可扩展性，每条规则独立，不内置编码风格
+ 规则可配置性高：可设置「警告」、「错误」两个 error 等级，或者直接禁用。
+ 
+## config
 ```
 {
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+
  "plugins":[
     "react"
  ],
