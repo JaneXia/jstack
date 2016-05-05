@@ -294,9 +294,35 @@
           }
       }
         
-* consistent-this
-* curly
-* default-case
+* **curly**
+      样例：curly: 2
+      
+      --通过--
+      if (foo) {
+        foo++;
+      }
+      while (bar) {
+          baz();
+      }
+      if (foo) {
+          baz();
+      } else {
+          qux();
+      }
+      
+      --不通过--
+      if (foo) foo++;
+      
+      while (bar)
+          baz();
+
+      if (foo) {
+          baz();
+      } else qux();   
+
+* **default-case**
+      样例：
+
 * dot-location
 * dot-notation
 * eol-last
